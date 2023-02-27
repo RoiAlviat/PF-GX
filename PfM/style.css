@@ -75,7 +75,7 @@ main h1 {
     width: 150px;
     border-radius: 5000px;
     height: 150px;
-    border: 4px dotted white;
+    
 }
 
 .h2-container {
@@ -90,10 +90,138 @@ main h1 {
     text-shadow: 3px 4px 7px rgba(0, 0, 0, 1);
 }
 
-.h2-container h2 {
-    font-weight: 300;
+.h2-animation {
+    position: relative;
+    display: inline-block;
+}
+
+.h2-animation::before {
+    content: 'GAME';
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: animtext 3s infinite alternate;
     
 }
+
+@keyframes animtext {
+    0% {
+        content: 'GAME';
+        transform: translateY(0px);
+        
+    }
+
+    25% {
+        content: 'GAME';
+        transform: translateY(0px);
+    }
+
+    50% {
+        content: 'GAME';
+        transform: translateY(-200px);
+        
+    }
+
+    75% {
+        content: 'LEVEL';
+        transform: translateY(0px);
+    }
+
+    100% {
+        content: 'LEVEL';
+        transform: translateY(0px);
+    }
+   
+
+}
+
+/*@keyframes animtext {
+    0% {
+        content: 'GAME';
+        transform: translateY(-200px);
+    }
+
+    25% {
+        content: 'GAME';
+        transform: translateY(0px);
+    }
+
+    35% {
+        content: 'GAME';
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(200px);
+        content: 'GAME';
+    }
+   
+    75% {
+        transform: translateY(0px);
+        content: 'LEVEL';
+    }
+
+    85% {
+        transform: translateY(0px);
+        content: 'LEVEL';
+    }
+
+    100% {
+        transform: translateY(-200px);
+        content: 'LEVEL';
+    }
+} */
+
+/*@keyframes animtext {
+    0% {
+        content: "GAME";
+    }
+    10% {
+        content: 'GAME';
+    }
+    20% {
+        content: 'GAM';
+    }
+    30% {
+        content: 'GA';
+    }
+    40% {
+        content: 'G';
+    }
+    50% {
+        content: '';
+    }
+    60% {
+        content: 'L';
+    }
+    70% {
+        content: 'LE';
+    }
+    80% {
+        content: 'LEV';
+    }
+    90%{
+        content: 'LEVE';
+    }
+    100% {
+        content: 'LEVEL';
+    }
+} */
+
+.h2-animation::after {
+    content: ' DESIGNER';
+    position: relative;
+    visibility: hidden;
+    display: inline-block;
+    
+}
+
+
+
+
+
+
+
 
 .bloctxt-container{
     display: flex;
