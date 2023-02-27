@@ -114,6 +114,7 @@ main h1 {
     25% {
         content: 'GAME';
         transform: translateY(0px);
+        
     }
 
     50% {
